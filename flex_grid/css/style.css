@@ -1,0 +1,17 @@
+html, body {height: 100%;width: 100%;background:url("../images/img1.avif");background-size: cover;}
+nav{display:flex;justify-content: space-between; box-shadow: 0px 0px 18px #585656;border-radius: 15px;}
+nav:hover{ box-shadow: 0px 0px 28px #585656}
+ul{color:orange}
+ul:hover{font-size:25px;}
+header{display:flex;flex-wrap: wrap;flex-direction: column;justify-content: center;align-items: center;width: 100%;height: 200px;}
+.databox{height:400px;width: 400px;border-radius: 15px; box-shadow: 0 0 13px #585656;margin:auto;padding: 10px;}
+.databox:hover{  box-shadow: 5px 10px 18px #888888;}
+.databox p{padding: 40px;}
+.databox-container{display:flex;}
+.gridbox{height:700px ;width: 100vw;display: grid;grid-template-columns: auto auto auto;grid-template-rows: auto auto 100px; }
+.gridbox div{ box-shadow:0px 0px 3px #585656;border-radius:15px ;text-align: center;padding:40px;margin:20px;}
+.gridbox div:hover{border-radius:20px ;text-align: center;padding:40px;	margin:18px;}
+#seven{grid-column:1  /span 3;grid-row: 3/span 1;  box-shadow: 5px 10px 18px #585656;text-align: center; }
+.box1 span, lable ,a{display: block; padding:10px}
+.box2 div,p,article{display:inline;padding:10px}
+
