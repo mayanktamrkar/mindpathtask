@@ -1,0 +1,6 @@
+html{font-size: 10px;}
+body{height: auto; background-color: rgb(204, 239, 227);}
+
+
+.parent{height:20em;font-size: 4em;position: relative;}
+.sticky{width: 100vw;height: 2em;background-color: blueviolet;position:sticky;top: 3em;}
