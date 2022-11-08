@@ -11,7 +11,7 @@ nav {
     width: 100vw;
     justify-content: space-around;
     align-items: center;
-    background-color: #000000;
+    background: #000;
 }
 
 p {
@@ -52,7 +52,7 @@ ul {
 .header {
     width: auto;
     height: 5em;
-    background-color: #008069;
+    background: #008069;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,7 +62,7 @@ ul {
     margin: 0%;
     width: 32em;
     height: 5em;
-    background-color: #008069;
+    background: #008069;
     position: absolute;
     bottom: 0;
     display: flex;
@@ -72,7 +72,7 @@ ul {
 
 input {
     height: 2em;
-    width: 14em;
+    width: 10em;
     border-radius: 2em;
     border: none;
 }
@@ -106,7 +106,7 @@ i {
     width: 3em;
     height: 3em;
     border-radius: 50%;
-    background-color: aliceblue;
+    background: aliceblue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,7 +116,7 @@ i {
 .sender {
     height: auto;
     width: auto;
-    background-color: #fff;
+    background: #fff;
     border-radius: 1em;
     padding: 0.5em;
 }
@@ -147,4 +147,10 @@ label {
     background: #fff;
     display: flex;
     align-items: center;
+    margin-left: 0.8em;
+}
+
+input:focus {
+    border: none;
+    outline: none;
 }
