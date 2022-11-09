@@ -27,10 +27,10 @@
         <nav>
             <div class="nav-content">
                 <a href="">
-                    <p class="nav-logo">Solutions</p>
+                    <p class="nav-logo" id="nav-logo">Solutions</p>
                 </a>
             </div>
-            <div class="navbar">
+            <div class="navbar" id="navbar">
                 <a href="#">Home</a>
                 <a href="#areas-content">Articles</a>
                 <a href="#">Websites</a>
@@ -142,5 +142,38 @@
             <h4> &copy; clinical Solutions,PLLC 2001-2022 ALL rights reserverd</h4>
         </section>
     </main>
+    <script>
+        function myFunction(){
+            let nav=document.getElementById("navbar")
+            let logo=document.getElementById("nav-logo")
+            if(nav.style.display=="" || nav.style.display=="none"){
+                nav.style.display="block"
+                logo.style.display="none"
+
+            }else{
+                nav.style.display="none"
+
+            }
+            
+
+        }
+
+        window.addEventListener("resize", function(event) {
+  let width = document.body.clientWidth;
+  let nav=document.getElementById("navbar")
+  
+  console.log(width)
+  if(width>900){
+    nav.style.display="flex"
+    
+    
+
+  }else{
+    nav.style.display="none"
+
+  }
+
+})
+    </script>
 </body>
 </html>
