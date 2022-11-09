@@ -147,11 +147,13 @@
             let nav=document.getElementById("navbar")
             let logo=document.getElementById("nav-logo")
             if(nav.style.display=="" || nav.style.display=="none"){
-                nav.style.display="block"
+                nav.style.display="flex"
+                nav.style.flexDirection="column"
                 logo.style.display="none"
 
             }else{
                 nav.style.display="none"
+                logo.style.display="block"
 
             }
             
@@ -161,10 +163,13 @@
         window.addEventListener("resize", function(event) {
   let width = document.body.clientWidth;
   let nav=document.getElementById("navbar")
+  let logo=document.getElementById("nav-logo")
   
   console.log(width)
   if(width>900){
     nav.style.display="flex"
+    nav.style.flexDirection="row"
+    logo.style.display="block"
     
     
 
