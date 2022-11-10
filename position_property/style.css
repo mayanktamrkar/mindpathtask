@@ -1,6 +1,12 @@
 html{font-size: 10px;}
-body{height: auto; background-color: rgb(204, 239, 227);}
+body{height: 250em; background-color: rgb(204, 239, 227);}
 
 
-.parent{height:20em;font-size: 4em;position: relative;}
-.sticky{width: 100vw;height: 2em;background-color: blueviolet;position:sticky;top: 3em;}
+.parent{height:70em;border: 0.1em solid black;display: flex;justify-content: space-around;align-items: center;}
+.parent-relative{height:70em;position: relative;border: 0.1em solid black;display: flex;justify-content: space-around;align-items: center;}
+.sticky{width: 10em;height: 10em;background-color: blueviolet;position:sticky;top: 3em;left: 0;}
+.absolute{width: 10em;height: 15em;background-color: rgb(226, 208, 43);position:absolute;right: 1em;top: 20em;}
+.absolute-relative{width: 10em;height: 15em;background-color: rgb(226, 208, 43);position:absolute;right: 1em;top: 0;}
+.fixed{width: 10em;height: 10em;background-color: rgb(43, 226, 223);position:fixed;top: 30em;left: 20em;}
+p{text-align: center;font-size: 2em;}
+    
