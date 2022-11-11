@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/661ec52f5f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,300&family=Roboto:ital,wght@0,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <title>Registration page</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Registration Form</h1>
+        </header>
+        <form class="main-content" name="myform">
+            <div class="fullname space">
+                <span><i class="fa-solid fa-user " style="color: black;"></i></span><input type="text"
+                    placeholder="Pls Enter name" name="fullname" required>
+            </div>
+            <div class="email space">
+                <span><i class="fa-solid fa-envelope"></i></span><input type="email" placeholder="Pls Enter email"
+                    name="email" required>
+            </div>
+            <div class="password space">
+                <span><i class="fa-solid fa-lock"></i></i></span><input type="password"
+                    placeholder="Pls Enter password " name="password" required>
+            </div>
+            <div class="cpassword space">
+                <span><i class="fa-solid fa-lock"></i></span><input type="password" placeholder="Pls Enter cpassword "
+                    name="cpassword" required>
+            </div>
+            <div class="gender-info space">
+                <span><i class="fa-solid fa-user " style="color: black;"></i></span>
+                <div class="gender-inputbox">
+                    <p>Gender</p><label>Male</label><input type="radio" name="gender" value="male"
+                        class="gender"><label>Female</label><input type="radio" value="female" name="gender" class="gender" required>
+                </div>
+            </div>
+            <div class="address space">
+                <span><i class="fa-solid fa-location-dot"></i></span><textarea type="text"
+                    placeholder="Pls Enter address " name="address" required></textarea>
+            </div>
+            <div class="country space">
+                <span><i class="fa-solid fa-earth-americas"></i></span>
+                <select name="country" class="country" required>
+                    <option value="">Select</option>
+                    <option value="India">India</option>
+                    <option value="America">America</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="Japan">Japan</option>
+                </select>
+            </div>
+            <div class="terms">
+                <input type="checkbox" class="checkbox" name="terms" value="yes" required><label>Did you fill all values </label>
+            </div>
+            <div class="submit-btn">
+                <input type="submit" name="Submit" id="submit" class="submit">
+            </div>
+        </form>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

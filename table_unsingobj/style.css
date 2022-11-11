@@ -1,9 +1,9 @@
 html{font-size: 12px;}
-body{margin: 0;padding: 0%;display: flex;flex-direction: column;align-items: center;}
+body{margin: 0;padding: 0%;display: flex;flex-direction: column;align-items: center;background: linear-gradient(#f6c7c7, #d6d9fb);}
 .output{width: 100em;height: 60em;display: flex;flex-direction: column;
     align-items: center;margin-top: 15em;}
 button{border: none;border-radius: 1em;width: 8em;height: 3em;}
-.container{display: flex;align-items: center;}
+.container{display: flex;align-items: center;box-shadow:0.5em 0.5em 2.5em rgb(169, 169, 169) ;}
 table{border: 0.1em solid black;  border-collapse: collapse;}
 table ,th,tr ,td{
     border: 0.2em solid black;
@@ -11,4 +11,4 @@ table ,th,tr ,td{
 
 }
 #table tr:nth-child(even){background-color: #f7e7e7;}
-th{background: rgb(209, 252, 238);}
+th{background: rgb(169, 252, 224);}
