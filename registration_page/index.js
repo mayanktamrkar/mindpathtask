@@ -1,7 +1,7 @@
 
 function check(e){
    
-   
+    // e.preventDefault()
     let fullname=document.forms["myform"]["fullname"].value
     let email=document.forms["myform"]["email"].value
     let password=document.forms["myform"]["password"].value
@@ -13,6 +13,9 @@ function check(e){
     if(fullname!=="" && email!=="" && password!=="" && cpassword!=="" && gender!=="" && country!=="" && address!=="" ){
         console.log("working")
 
+    }
+    if(password==cpassword){
+        console.log("pp")
     }
 
     console.log(fullname,password,cpassword,email,gender,country,address,terms)
