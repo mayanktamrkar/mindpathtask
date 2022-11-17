@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/661ec52f5f.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,33 +19,44 @@
             <h1>Registration Form</h1>
         </header>
         <form class="main-content" name="myform">
-            <div class="fullname space">
-                <span><i class="fa-solid fa-user " style="color: black;"></i></span><input type="text" placeholder="Pls Enter name" name="fullname" required pattern="[a-z]">
+            <div class="first-name space">
+                <span><i class="fa-solid fa-user " style="color: black;"></i></span><input class="line-remove" type="text" placeholder="Pls Enter firstname" name="firstname" required pattern="[A-Za-z]+"  oninvalid="setCustomValidity(' only character  required ')" 
+                oninput="setCustomValidity('')" >
+            </div>
+            <div class="last-name space">
+                <span><i class="fa-solid fa-user " style="color: black;"></i></span><input class="line-remove" type="text" placeholder="Pls Enter lastname" name="lastname" required pattern="[A-Za-z]+"  oninvalid="setCustomValidity(' only character  required ')" 
+                oninput="setCustomValidity('')" >
             </div>
             <div class="email space">
-                <span><i class="fa-solid fa-envelope"></i></span><input type="email" placeholder="Pls Enter email" name="email" required>
+                <span><i class="fa-solid fa-envelope"></i></span><input class="line-remove" type="email" placeholder="Pls Enter email" name="email" required oninvalid="setCustomValidity(' email is required ')" 
+                oninput="setCustomValidity('')">
             </div>
             <div class="tel space">
-                <span><i class="fa-solid fa-envelope"></i></span><input type="tel" placeholder="Pls Enter phone no." name="tel" required maxlength="10" pattern="[0-9]{10}">
+                <span><i class="fa-solid fa-envelope"></i></span><input class="line-remove" type="tel" placeholder="Pls Enter phone no." name="tel" required maxlength="10" pattern="[0-9]{10}" oninvalid="setCustomValidity(' only number is required and minlength should be 10')" 
+                oninput="setCustomValidity('')">
             </div>
             <div class="password space">
-                <span><i class="fa-solid fa-lock"></i></i></span><input type="password" placeholder="Pls Enter password " name="password" required minlength="5">
+                <span><i class="fa-solid fa-lock"></i></i></span><input class="line-remove" type="password" placeholder="Pls Enter password " name="password" required  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$" oninvalid="setCustomValidity('password must be 1 char uppercase ,1 lowercase,1 special char,minlength-8,maxlength-12')" 
+                oninput="setCustomValidity('')">
             </div>
             <div class="cpassword space">
-                <span><i class="fa-solid fa-lock"></i></span><input type="password" placeholder="Pls Enter cpassword " name="cpassword" required minlength="5">
+                <span><i class="fa-solid fa-lock"></i></span><input class="line-remove" type="password" placeholder="Pls Enter cpassword " name="cpassword" required  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$"  oninvalid="setCustomValidity('password must be 1 char uppercase ,1 lowercase,1 special char,minlength-8,maxlength-12')" 
+                oninput="setCustomValidity('')" >
             </div>
-            <div class="gender-info space">
+            <div class="gender-info space" >
                 <span><i class="fa-solid fa-user " style="color: black;"></i></span>
-                <div class="gender-inputbox">
-                    <p>Gender</p><label>Male</label><input type="radio" name="gender" value="male" class="gender"><label>Female</label><input type="radio" value="female" name="gender" class="gender" required>
+                <div class="gender-inputbox line-remove" id="gender">
+                    <p>Gender</p><label>Male</label><input type="radio" name="gender" value="male" class="gender"><label>Female</label><input type="radio" value="female" name="gender" class="gender" required onchange="addline()">
                 </div>
             </div>
             <div class="address space">
-                <span><i class="fa-solid fa-location-dot"></i></span><textarea type="text" placeholder="Pls Enter address " name="address" required></textarea>
+                <span><i class="fa-solid fa-location-dot"></i></span><textarea type="text" class="line-remove" placeholder="Pls Enter address " name="address" required oninvalid="setCustomValidity('address required')" 
+                oninput="setCustomValidity('')"></textarea>
             </div>
             <div class="country space">
                 <span><i class="fa-solid fa-earth-americas"></i></span>
-                <select name="country" class="country" required>
+                <select class="line-remove" name="country" class="country" required oninvalid="setCustomValidity('country required')" 
+                oninput="setCustomValidity('')">
                     <option value="">Select</option>
                     <option value="India">India</option>
                     <option value="America">America</option>
@@ -53,15 +64,16 @@
                     <option value="Japan">Japan</option>
                 </select>
             </div>
-            <div class="terms">
-                <input type="checkbox" class="checkbox" name="terms" value="yes" required><label>Did you fill all values </label>
+            <div class="terms line-remove" id="terms">
+                <input type="checkbox" class="checkbox " name="terms" value="1" required oninvalid="setCustomValidity('pls select this')" 
+                oninput="setCustomValidity('')"> <input type='hidden' value='0' name="terms" ><label>I accept all terms & conditions </label>
             </div>
             <div class="submit-btn">
                 <input type="submit" name="Submit" id="submit" class="submit">
             </div>
         </form>
     </main>
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
