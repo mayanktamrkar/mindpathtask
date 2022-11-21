@@ -11,7 +11,7 @@ export const Header = (props) => {
           <li>{home}</li>
           <li>About </li>
           <li>Contact</li>
-          <li>service</li>
+          <li>Service</li>
           <li> {name}</li>  
          
         </ul>

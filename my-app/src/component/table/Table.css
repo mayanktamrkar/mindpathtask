@@ -1,4 +1,4 @@
-.container{
+/* .container{
     height: 50rem;
     width: auto;
     border: 1px solid black;
@@ -6,13 +6,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 table{
     border: 1px solid black;
     border-collapse: collapse;
     padding: 2rem;
     margin: auto auto;
     background: #e0fbfc;
+    width: 100rem;
 
  
 }

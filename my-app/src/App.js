@@ -3,22 +3,38 @@ import './App.css';
 import { Header } from './component/Header/Header'
 import { Table } from './component/table/Table'
 import Footer  from './component/foooter/Footer';
+import Form from './component/form/Form';
+import { useState } from 'react'
 
 
 function App() {
-  let amount =105467456
 
-  let data=[{name:"mayank",age:21,address:"marimata"},
-            {name:"prayag",age:20, address:"bangali square"},
-            {name:"mohit",age:22, address:"rau "},
-            {name:"dev",age:19, address:"vijaynagar "}
-          ]
+  const [year,setYear]=useState('All')
+  const [data,setData ]=useState([{name:"mayank",age:21,address:"marimata"},
+  {name:"prayag",age:20, address:"bangali square"},
+  {name:"mohit",age:22, address:"rau "},
+  {name:"dev",age:19, address:"vijaynagar "},
+  {name:"ashish",age:18, address:"dewas naka"}
+]
+
+  )
+
+  console.log(year)
+ 
+  
+
+  function setvalue(p){
+    console.log(p)
+    setData([...data,p])
+  }
 
   return (
     <>
      
-      <Header className="mayank" />
-      <Table data={data} pass={amount} />
+      <Header className="Mayank" />
+      <Form    fun={setvalue}  setyear={setYear}/>
+      
+      <Table data={data} year={year} />
       <Footer>iam child</Footer>
  
 

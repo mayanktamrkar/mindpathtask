@@ -1,21 +1,31 @@
 import './Table.css'
-import { useState } from 'react'
+//import { useState } from 'react'
 export const Table = (props) => {
-    // let name="Name"
-    console.log(props.pass)
-    let data = props.data
-    const my = {
-        color: "red"
+    
+    //console.log(props.pass)
+    let data;
+    if(props.year==="All"){
+        data = props.data
+
+    }else{
+        data=props.data.filter((v)=>{
+            return v.age==props.year
+        })
+        
+
     }
-    const [name, set] = useState(0)
+    
+    
+   
+   //console.log(data1)
     return (
         <div className='container'>
-            <table id="customers">
+            <table>
                 <tr>
-                    <th>{name}</th>
-                    <th >age</th>
-                    <th style={my}>address</th>
-                    <th>click</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Address</th>
+                    <th>Delete</th>
                 </tr>
                 {data.map((val, key) => {
                     return (
@@ -23,7 +33,8 @@ export const Table = (props) => {
                             <td>{val.name}</td>
                             <td>{val.age}</td>
                             <td>{val.address}</td>
-                            <td><button onClick={() => { set(1) }}>click</button></td>
+                            <td><button onClick={(e) => { e.target.parentElement.parentElement.remove()
+                        console.log('clicked')}}>Delete</button></td>
                         </tr>
                     )
                 })}
