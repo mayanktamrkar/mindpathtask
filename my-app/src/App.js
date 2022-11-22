@@ -10,6 +10,7 @@ import { useState } from 'react'
 function App() {
 
   const [year,setYear]=useState('All')
+  // const [value,setValue]=useState('')
   const [data,setData ]=useState([{name:"mayank",age:21,address:"marimata"},
   {name:"prayag",age:20, address:"bangali square"},
   {name:"mohit",age:22, address:"rau "},
@@ -18,6 +19,18 @@ function App() {
 ]
 
   )
+  const del=(position)=>{
+    data.splice(position,1)
+    setData([...data])
+    console.log(data)
+
+  }
+  const edit=(position,value)=>{
+     data.splice(position,1,value)
+    // console.log("-->",position,value)
+  }
+ 
+ 
 
   console.log(year)
  
@@ -32,9 +45,9 @@ function App() {
     <>
      
       <Header className="Mayank" />
-      <Form    fun={setvalue}  setyear={setYear}/>
+      <Form    fun={setvalue}  setyear={setYear} />
       
-      <Table data={data} year={year} />
+      <Table data={data} year={year}  del={del} edit={edit}/>
       <Footer>iam child</Footer>
  
 

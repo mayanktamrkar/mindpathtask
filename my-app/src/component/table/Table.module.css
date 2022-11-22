@@ -13,24 +13,33 @@ table{
     padding: 2rem;
     margin: auto auto;
     background: #e0fbfc;
-    width: 100rem;
+    width: 70vw;
 
  
 }
 td,th,tr{
     border: 1px solid black;
     font-size: 1.5rem;
-    padding:2rem 3rem;
+    padding:0.5rem 3rem;
+    text-align: center;
 }
 th{
-    background: #415d43;
+    background:var(--greencolor);
     color: #e0fbfc;
 }
-button{
+.button{
     border: none;
-   background: #415d43;;
+   background:var(--greencolor);
    padding: 0.5rem 2rem;
    color: #fafafa;
    border-radius: 0.5rem;
+   margin: 0 1rem;
    
+}
+
+@media screen and (max-width:1000px) {
+    .button{
+        margin:0.5rem auto;
+    }
+    
 }

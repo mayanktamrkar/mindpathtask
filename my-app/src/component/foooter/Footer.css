@@ -1,0 +1,16 @@
+.footer{
+    width: 100vw;
+    height: 10rem;
+    background-color: var(--greencolor);
+    margin-top: 5rem;
+   
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.footer p{
+    text-align: center;
+    color: aliceblue;
+}
