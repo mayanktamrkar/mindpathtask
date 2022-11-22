@@ -1,12 +1,12 @@
 
-import './Header.css'
+import styles from './Header.module.css'
 
 export const Header = (props) => {
   let home="Home"
   let name=props.className   //name from app.js
   // console.log(props.data )//object
   return (<>
-      <div className='header'>
+      <div className={styles.header}>
         <ul>
           <li>{home}</li>
           <li>About </li>

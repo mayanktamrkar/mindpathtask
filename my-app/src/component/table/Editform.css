@@ -1,0 +1,25 @@
+.editform{
+
+    width: 30rem;
+    height: 30rem;
+    background: #e0fbfc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top:35vh;
+    left: 40vw;
+    border-radius: 1rem;
+    border:1px solid var(--greencolor)
+    
+
+}
+.editform input{
+    width: 50%;
+    margin: 0.5rem auto;
+
+}
+.editform button{
+    width: 50%;
+    margin: 0.5rem auto;
+}
