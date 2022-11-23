@@ -10,7 +10,8 @@ import { useState } from 'react'
 function App() {
 
   const [year,setYear]=useState('All')
-  // const [value,setValue]=useState('')
+  const [opacity,seTopacity]=useState("")
+  
   const [data,setData ]=useState([{name:"mayank",age:21,address:"marimata"},
   {name:"prayag",age:20, address:"bangali square"},
   {name:"mohit",age:22, address:"rau "},
@@ -32,7 +33,7 @@ function App() {
  
  
 
-  console.log(year)
+  console.log("o",opacity)
  
   
 
@@ -41,17 +42,18 @@ function App() {
     setData([...data,p])
   }
 
+
   return (
-    <>
+    <div  className= {` main ${opacity}`} >
      
       <Header className="Mayank" />
       <Form    fun={setvalue}  setyear={setYear} />
       
-      <Table data={data} year={year}  del={del} edit={edit}/>
+      <Table  data={data} year={year}  del={del} edit={edit} seTopacity={seTopacity}/>
       <Footer>iam child</Footer>
  
 
-    </>
+    </div>
 
   );
 }

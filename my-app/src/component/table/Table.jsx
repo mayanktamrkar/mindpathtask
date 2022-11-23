@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import Editform from './Editform';
 import styles from './Table.module.css'
+import  ReactDOM  from 'react-dom';
 export const Table = (props) => {
     const [value,setvalue]=useState({name:'',age:'',address:''})
     const [isedit,setIsedit]=useState(false)
     const [key,setKey]=useState(0)
+    let a=false
     let data;
     //console.log("key",key)
     if(props.year==="All"){
@@ -20,10 +22,14 @@ export const Table = (props) => {
         setIsedit(true)
     }
     console.log(value)
+
+
+  
     return (
         <div className='container'>
-          {isedit  && <Editform k={key}   name={value.name} age={value.age} address={value.address}  setedit={setIsedit}  editdata={props.edit}/> }
-          <table>
+            { isedit  &&  ReactDOM.createPortal(<Editform k={key} seTopacity={props.seTopacity}  name={value.name} age={value.age} address={value.address}  setedit={setIsedit}  editdata={props.edit}/>,document.getElementById('root2'))}
+          { }
+          <table >
                 <tr>
                     <th>Name</th>
                     <th>Age</th>
@@ -38,7 +44,8 @@ export const Table = (props) => {
                             <td>{val.address}</td>
                             <td><button className={styles.button}   onClick={(e) => { props.del(key)
                        }}>Delete</button> <button className={styles.button}  onClick={()=>{editbutton(val.name,val.age,val.address)  
-                        setKey(key)}}>Edit</button></td>
+                        setKey(key)    
+                        props.seTopacity("opacity")}}>Edit</button></td>
                         </tr>
                     )
                 })}

@@ -4,13 +4,14 @@ form{
     display: flex;
     flex-direction: column;justify-content: center;align-items: center;
     margin: 2rem auto;        max-width:70vw;
-    height: 20rem;
+    height: 25rem;
     background: #e0fbfc;
     
 
 }
 form div{
     display: flex;align-items: center;
+    flex-direction: column;
     margin: 0.5rem auto;
 
 }
@@ -27,6 +28,7 @@ form input{
     align-self: flex-end;
     width: 5rem;
     color:var(--greencolor);
+    padding: 0 0.5rem;
 
     border:3px solid var(--greencolor);
 }
@@ -46,6 +48,11 @@ form input{
    border-radius: 0.5rem;
    box-shadow: 0.5rem 0.5rem 2.5rem rgb(184, 184, 184);
    
+}
+lable{
+    color: red;
+    margin: 0.2rem 0;
+
 }
 
 @media screen and (max-width:780px) {
