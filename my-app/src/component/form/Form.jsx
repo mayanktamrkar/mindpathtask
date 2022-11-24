@@ -12,8 +12,9 @@ const Form = (p) => {
         }
         }
     let addname =(e)=>{
+        setData({...data,name:e.target.value})
         if(isvalid(e.target.value)){
-            setData({...data,name:e.target.value})
+           
             setname(true)
             // console.log(isname)
         }else{
@@ -21,16 +22,18 @@ const Form = (p) => {
         }   
     }
     let addage =(e)=>{
+        setData({...data,age:e.target.value})
         if(isvalid(e.target.value)){
-            setData({...data,age:e.target.value})
+           
             setage(true)
         }else{
             setage(false)
         }
     }
     let addaddress =(e)=>{
+        setData({...data,address:e.target.value})
         if(isvalid(e.target.value)){
-            setData({...data,address:e.target.value})
+            
             setaddress(true)
         }else{
             setaddress(false)

@@ -1,3 +1,16 @@
+
+
+.editform-container{
+    width: 100%;
+    height: 100%;
+    background-color: #0605057d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+
 .editform{
 
     width: 40rem;

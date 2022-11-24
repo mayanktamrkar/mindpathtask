@@ -1,0 +1,21 @@
+.counter-box{
+    height: calc(100vh -  10rem);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ 
+}
+.counter{
+    width: 45rem;
+    height: 50rem;
+    background-color: #e0fbfc;
+    box-shadow: 5px 5px 25px #c5c5c5;
+}
+.counter div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
