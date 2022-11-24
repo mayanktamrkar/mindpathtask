@@ -3,71 +3,93 @@ import React, { useState } from 'react'
 import  styles from './Form.module.css'
 const Form = (p) => {
     const [data,setData]=useState({name:'',age:'',address:''})
-    const [is,setIs]=useState({isname:false,isage:false,isaddress:false})
+    const [isname,setname]=useState(true)
+    const [isage,setage]=useState(true)
+    const [isaddress,setaddress]=useState(true)
     let isvalid=(p)=>{
         if(p.trim().length!==0){
             return true
         }
         }
     let addname =(e)=>{
+        setData({...data,name:e.target.value})
         if(isvalid(e.target.value)){
-            setData({...data,name:e.target.value})
-            setIs({...is,isname:true})
+           
+            setname(true)
             // console.log(isname)
         }else{
-            setIs({...is,isname:false})
-        }
+            setname(false)
+        }   
     }
     let addage =(e)=>{
+        setData({...data,age:e.target.value})
         if(isvalid(e.target.value)){
-            setData({...data,age:e.target.value})
-            setIs({...is,isage:true})
+           
+            setage(true)
         }else{
-            setIs({...is,isage:false})
+            setage(false)
         }
     }
     let addaddress =(e)=>{
+        setData({...data,address:e.target.value})
         if(isvalid(e.target.value)){
-            setData({...data,address:e.target.value})
-            setIs({...is,isaddress:true})
+            
+            setaddress(true)
         }else{
-            setIs({...is,isaddress:false})
+            setaddress(false)
         }
     }
     let submitform=(e)=>{
         e.preventDefault()
-        console.log(is.isname,is.isage,is.isaddress)
-        if(is.isname && is.isage && is.isaddress){
-            p.fun(data)
+        if(data.name.trim().length==0){
+            console.log("working name")
+            setname(false)
         }
-        setData((p)=>{
-           return {...p,name:'',age:'',address:''}
-        })
-        setIs({isname:false,isage:false,isaddress:false})
+        console.log("check",isname)
+        if(data.age.trim().length==0){
+            console.log("working age")
+            setage(false)
+        }
+        if(data.address.trim().length==0){
+            console.log("working address")
+             setaddress(false)
+        }
+        if(data.name.trim().length!==0 && data.age.trim().length!==0 && data.address.trim().length!==0 ){
+            p.fun(data)
+            setData((p)=>{
+                return {...p,name:'',age:'',address:''}
+             })
+             setname(true)
+             setage(true)
+             setaddress(true)
+        }
+        console.log(isname,isage,isaddress)
+        console.log(data)
+        // setIs({isname:false,isage:false,isaddress:false})
     }
-    
-    
     let addfilter=(e)=>{
         p.setyear(e.target.value)
     }
-    //console.log(data)
+    //
   return (
-    <form >
+    <form  className={p.opacity}>
         <div>
-        <input value={data.name} type='text' name='fullname' className={is.isname?"":styles.invalid}  placeholder='Your Name' onChange={addname} required/>
+        <input   value={data.name} type='text' name='fullname' className={isname?"":styles.invalid}  placeholder='Your Name' onChange={addname} required/>
+        {!isname && data.name.length<=0?<lable>pls enter name</lable>:""}
         </div>
         <div>
-        <input value={data.age} type='number' name='age' className={is.isage?"":styles.invalid}  placeholder='Your age'  onChange={addage} required/>
+        <input  value={data.age} type='number' name='age' className={isage?"":styles.invalid}  placeholder='Your age'  onChange={addage} required/>
+        {!isage && data.age.length<=0?<lable>pls enter age</lable>:""}
         </div>
         <div>
-        <input value={data.address} type='text' name='address' className={is.isaddress?"":styles.invalid}  placeholder='Your address'  onChange={addaddress} required/>
+        <input  value={data.address} type='text' name='address' className={isaddress?"":styles.invalid}  placeholder='Your address'  onChange={addaddress} required/>
+        {!isaddress && data.address.length<=0?<lable>pls enter address</lable>:""}
         </div>
         <div>
-            <button type='submit' className={styles.button} onClick={submitform}>Add</button>
-            
+            <button   type='submit' className={styles.button} onClick={submitform}>Add</button>
         </div>
         <div>
-            <select name='filter' className={styles.select} onChange={addfilter}>
+            <select  name='filter' className={styles.select} onChange={addfilter}>
                 <option name='filter' value='All'>All</option>
                 <option name='filter' value='18'>18</option>
                 <option name='filter' value='19'>19</option>

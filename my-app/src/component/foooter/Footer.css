@@ -1,6 +1,6 @@
 .footer{
     width: 100vw;
-    height: 10rem;
+    height: 5rem;
     background-color: var(--greencolor);
     margin-top: 5rem;
    
@@ -8,7 +8,7 @@
     bottom: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 }
 .footer p{
     text-align: center;

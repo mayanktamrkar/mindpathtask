@@ -1,25 +1,47 @@
+
+
+.editform-container{
+    width: 100%;
+    height: 100%;
+    background-color: #0605057d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+
 .editform{
 
-    width: 30rem;
-    height: 30rem;
-    background: #e0fbfc;
+    width: 40rem;
+    height: 40rem;
+    background: #e0fbfc;;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: fixed;
-    top:35vh;
-    left: 40vw;
+    position: absolute;
+    top:30vh;
+    left: 35vw;
     border-radius: 1rem;
-    border:1px solid var(--greencolor)
+    border:1px solid var(--greencolor);
+    z-index: 100;
+    isolation: isolate;
+    opacity: 1;
+    box-shadow: 5px 5px 25px grey;
     
 
 }
 .editform input{
-    width: 50%;
+    width: 60%;
+    height: 3rem;
     margin: 0.5rem auto;
+    border-radius: 1rem;
 
 }
 .editform button{
     width: 50%;
-    margin: 0.5rem auto;
+    margin: 2rem auto;
+    background: var(--greencolor);
+
+    height: 3rem;
 }
