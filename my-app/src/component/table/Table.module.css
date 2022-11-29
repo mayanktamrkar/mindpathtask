@@ -1,37 +1,30 @@
-/* .container{
-    height: 50rem;
-    width: auto;
-    border: 1px solid black;
-    margin:4rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
+
 table{
     border: 1px solid black;
     border-collapse: collapse;
     padding: 2rem;
     margin: auto auto;
-    background: #e0fbfc;
+    background: var(--sky);
     width: 70vw;
 
  
 }
 td,th,tr{
-    border: 1px solid black;
+    border: 1px solid var(--greencolor);
     font-size: 1.5rem;
     padding:0.5rem 3rem;
     text-align: center;
+    color:var(--textcolorblack)
 }
 th{
     background:var(--greencolor);
-    color: #e0fbfc;
+    color: white;
 }
 .button{
     border: none;
    background:var(--greencolor);
    padding: 0.5rem 2rem;
-   color: #fafafa;
+   color:  white;
    border-radius: 0.5rem;
    margin: 0 1rem;
    

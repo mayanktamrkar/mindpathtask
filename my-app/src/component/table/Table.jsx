@@ -10,7 +10,7 @@ export const Table = (props) => {
     const [key,setKey]=useState(0)
     let a=false
     let data;
-    //console.log("key",key)
+    console.log("table")
     if(props.year==="All"){
         data = props.data
     }else{
@@ -19,11 +19,11 @@ export const Table = (props) => {
         })
     }
     const editbutton=(name,age,address)=>{
-        console.log(name,age,address)
+        // console.log(name,age,address)
         setvalue({name,age,address})
         setIsedit(true)
     }
-    console.log("key-->",key)
+    // console.log("key-->",key)
 
     const conifrm_delete=()=>{
         props.del(key) 

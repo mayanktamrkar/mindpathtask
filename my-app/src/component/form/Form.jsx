@@ -3,87 +3,83 @@ import React, { useState } from 'react'
 import  styles from './Form.module.css'
 const Form = (p) => {
     const [data,setData]=useState({name:'',age:'',address:''})
-    const [isname,setname]=useState(true)
-    const [isage,setage]=useState(true)
-    const [isaddress,setaddress]=useState(true)
-    let isvalid=(p)=>{
-        if(p.trim().length!==0){
-            return true
-        }
-        }
-    let addname =(e)=>{
-        setData({...data,name:e.target.value})
-        if(isvalid(e.target.value)){
-           
-            setname(true)
-            // console.log(isname)
-        }else{
-            setname(false)
-        }   
-    }
-    let addage =(e)=>{
-        setData({...data,age:e.target.value})
-        if(isvalid(e.target.value)){
-           
-            setage(true)
-        }else{
-            setage(false)
-        }
-    }
-    let addaddress =(e)=>{
-        setData({...data,address:e.target.value})
-        if(isvalid(e.target.value)){
+    const [usernameError,setusernameError]=useState("")
+    const [ageError,setageError]=useState('')
+    const [addressError,setAddressError]=useState("")
+    
+    const validation=(value)=>{
+        if(value.name.trim().length==0){
             
-            setaddress(true)
+            setusernameError("pls enter name")
+
+
+        }
+        else if( value.name.trim().length>0 && value.name.trim().length<=3){
+            
+            setusernameError("pls enter min 3 char")
+        }
+        else if(value.name.length>8){
+            setusernameError("max lenth is 8 char")
         }else{
-            setaddress(false)
+            setusernameError("")
         }
+        if(value.age.length===0){
+            setageError("pls enter age")
+        }else{
+            setageError("")
+
+        }
+        if(value.address.trim().length===0){
+            setAddressError("pls enter address")
+
+        }
+        else if(value.address.trim().length>0 && value.address.trim().length<=3){
+            setAddressError("pls enter min 3 char")
+        }
+        else if(value.address.length>8){
+            setAddressError("max lenth is 8 char")
+        }else{
+            setAddressError("")
+
+        }
+
+
     }
+    const changehandler=(e)=>{
+        setData({...data,[e.target.name]:e.target.value})
+        validation(data)
+
+    }
+
+  
     let submitform=(e)=>{
+        validation(data)
         e.preventDefault()
-        if(data.name.trim().length==0){
-            console.log("working name")
-            setname(false)
-        }
-        console.log("check",isname)
-        if(data.age.trim().length==0){
-            console.log("working age")
-            setage(false)
-        }
-        if(data.address.trim().length==0){
-            console.log("working address")
-             setaddress(false)
-        }
-        if(data.name.trim().length!==0 && data.age.trim().length!==0 && data.address.trim().length!==0 ){
+        if(usernameError.trim().length===0 && ageError.trim().length===0 && addressError.trim().length===0 && data.name.trim().length!==0 && data.age.trim().length!==0  && data.address.trim().length!==0  ) {
             p.fun(data)
             setData((p)=>{
                 return {...p,name:'',age:'',address:''}
              })
-             setname(true)
-             setage(true)
-             setaddress(true)
+
         }
-        console.log(isname,isage,isaddress)
-        console.log(data)
-        // setIs({isname:false,isage:false,isaddress:false})
+       
     }
     let addfilter=(e)=>{
         p.setyear(e.target.value)
     }
-    //
   return (
-    <form  className={p.opacity}>
+    <form  className={styles.form}>
         <div>
-        <input   value={data.name} type='text' name='fullname' className={isname?"":styles.invalid}  placeholder='Your Name' onChange={addname} required/>
-        {!isname && data.name.length<=0?<lable>pls enter name</lable>:""}
+        <input   value={data.name} type='text' name='name'   placeholder='Your Name' onChange={changehandler} minLength={3} required/>
+        {<lable>{usernameError}</lable>} 
         </div>
         <div>
-        <input  value={data.age} type='number' name='age' className={isage?"":styles.invalid}  placeholder='Your age'  onChange={addage} required/>
-        {!isage && data.age.length<=0?<lable>pls enter age</lable>:""}
+        <input  value={data.age} type='number' name='age' placeholder='Your age'  onChange={changehandler} required/>
+        {<lable>{ageError}</lable>}
         </div>
         <div>
-        <input  value={data.address} type='text' name='address' className={isaddress?"":styles.invalid}  placeholder='Your address'  onChange={addaddress} required/>
-        {!isaddress && data.address.length<=0?<lable>pls enter address</lable>:""}
+        <input  value={data.address} type='text' name='address'   placeholder='Your address'  onChange={changehandler} required/>
+        {<lable>{addressError}</lable>}
         </div>
         <div>
             <button   type='submit' className={styles.button} onClick={submitform}>Add</button>

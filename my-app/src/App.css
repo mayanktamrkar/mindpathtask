@@ -1,9 +1,28 @@
-:root{
-    --greencolor: #415d43;
-}
-.main{
+
+.main1{
     height: 100vh;
     width: 100vw;
+    --greencolor: #415d43;
+    --sky:#e0fbfc;
+    --textcolorwhite:white;
+    --textcolorgreen:#415d43;
+    background: #E3E4FA;
+    --form:#e0fbfc;
+    --confirmsky:#e0fbfc
+  
+  
+}
+
+
+.main2{
+    height: 100vh;
+    width: 100vw;
+    --greencolor: #846fbe;
+    --sky:#3E454B;
+    --textcolorwhite:rgb(0, 0, 0);
+    --textcolorblack:#fffcfc;
+    background: #323232;
+    --form:#3E454B
   
   
 }

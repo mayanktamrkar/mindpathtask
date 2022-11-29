@@ -2,7 +2,7 @@
     border: none;
     background:var(--greencolor);
     padding: 0.5rem 2rem;
-    color: #fafafa;
+    color: var(--textcolorwhite);
     border-radius: 0.5rem;
     margin: 0 1rem;
     

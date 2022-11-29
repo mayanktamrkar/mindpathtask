@@ -2,7 +2,10 @@ import React from 'react'
 import './Confirm.css'
 import Wrapper from '../comman/Wrapper'
 
+const citydata= React.createContext({city:"indore",}) ;  
+
 const Confirm = (props) => {
+  console.log("confirm")
   return (
     <Wrapper>
     <div  className='popup'>
@@ -26,4 +29,5 @@ const Confirm = (props) => {
   )
 }
 
-export default Confirm
+export default Confirm;
+export  { citydata };

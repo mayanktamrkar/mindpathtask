@@ -1,11 +1,11 @@
  .header ul{
-    background: #415d43;
+    background: var(--greencolor);
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 5rem;
     margin: 0%;
-    color: white;
+    color:  var(--textcolorwhite);
  }
  ul li{
    
