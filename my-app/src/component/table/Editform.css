@@ -15,7 +15,7 @@
 
     width: 40rem;
     height: 40rem;
-    background: #e0fbfc;;
+    background: #e0fbfc;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,7 +23,7 @@
     top:30vh;
     left: 35vw;
     border-radius: 1rem;
-    border:1px solid var(--greencolor);
+    border:1px solid #415d43;
     z-index: 100;
     isolation: isolate;
     opacity: 1;
@@ -41,7 +41,7 @@
 .editform button{
     width: 50%;
     margin: 2rem auto;
-    background: var(--greencolor);
+    background: #415d43;
 
     height: 3rem;
 }

@@ -1,9 +1,11 @@
 
 import styles from './Header.module.css'
-
+import React from 'react'
+const items= React.createContext({name:"mayank",age:(p)=>{ console.log("header",p)}})   //create context
 export const Header = (props) => {
   let home="Home"
-  let name=props.className   //name from app.js
+  console.log("header")
+  
  
   return (<>
       <div className={styles.header}>
@@ -12,7 +14,8 @@ export const Header = (props) => {
           <li>About </li>
           <li>Contact</li>
           <li>Service</li>
-          <li onClick={()=>{props.setChange(true)}}> {name}</li>  
+         {props.login? <li onClick={()=>{props.setChange(false)}}>Logout</li>:""}
+         {props.toggle? <li onClick={()=>{props.setToggle(false)}}>light</li>:<li onClick={()=>{props.setToggle(true)}}>Dark</li>}
          
         </ul>
         
@@ -25,3 +28,5 @@ export const Header = (props) => {
     
   )
 }
+
+export default items ;

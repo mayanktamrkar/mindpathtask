@@ -5,17 +5,17 @@
     width: 40rem;
     height: 20rem;
     background: #e0fbfc;
-    border: 1px solid var(--greencolor);
+    border: 1px solid #415d43;
     z-index: 100;
 }
 .confirm-container{
     width: 100%;
     height: 30%;
-    background: var(--greencolor);
+    background: #415d43;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #e0fbfc;
+    color:  white;
 
 }
 .confirm-container p{
@@ -30,11 +30,11 @@
   
 }
 .button-section button{
-    background: var(--greencolor);
-    color: #e0fbfc;
+    background: #415d43;
+    color:  white;
     margin: 20% 1rem;
     padding: 1rem 3rem; 
-    border: 1px solid white;
+    border: 1px solid  #e0fbfc;
     border-radius: 1rem ;
 }
 

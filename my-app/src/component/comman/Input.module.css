@@ -1,0 +1,14 @@
+.input{
+    background: var(--sky);
+    border-top-style: none;
+   border-right-style: none;
+  
+  border-left-style: none;
+  margin: 2rem;
+  width: 25rem;
+  height: 3rem;
+  outline: none;
+
+   
+    
+}

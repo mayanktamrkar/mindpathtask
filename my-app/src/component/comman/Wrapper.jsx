@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Wrapper.css'
 
+import items from '../Header/Header'
+
 const Wrapper = (props) => {
+
+  const data=useContext(items)
+
+  console.log("wrapper")
+
+  
+
+
   return (
-    <div className='wrappers'>{props.children}</div>
+    <div id='root3' className='wrappers'>{props.children}</div>
   )
 }
 
