@@ -7,7 +7,7 @@ const Wrapper = (props) => {
 
   const data=useContext(items)
 
-  console.log("wrapper")
+  // console.log("wrapper")
 
   
 

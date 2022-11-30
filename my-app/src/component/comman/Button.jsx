@@ -2,11 +2,12 @@ import React from 'react'
 import './Button.css'
 
 const Button = (props) => {
-    let style = `buttons ${props.className}`
+   
+    console.log("button");
   
   return (
-    <button className={style}>{props.children}</button>
+    <button onClick={()=>{props.onClick("clicked")}}>{props.name}</button>
   )
 }
 
-export default Button
+export default React.memo(Button);

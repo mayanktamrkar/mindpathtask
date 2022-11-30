@@ -6,7 +6,11 @@ html,body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('./asset/backgroundimg.jpg');
+  background-repeat: none;
+  background-size: 100vw 100vh;
   
+ 
 }
 
 

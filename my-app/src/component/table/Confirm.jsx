@@ -5,7 +5,7 @@ import Wrapper from '../comman/Wrapper'
 const citydata= React.createContext({city:"indore",}) ;  
 
 const Confirm = (props) => {
-  console.log("confirm")
+  // console.log("confirm")
   return (
     <Wrapper>
     <div  className='popup'>

@@ -1,0 +1,25 @@
+.outsideContainer{
+    /* background: linear-gradient( #e2d0f2, #f0e1c8); */
+    width: 100vw;
+    height: 100vh;
+
+}
+.imgSection img{
+    width: 100vw;
+    height: calc(100vh - 60px) ;
+    z-index: 10;
+  
+
+}
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000009d;
+    z-index: 100;
+    position: fixed;
+}
+
+
+
+
+/* background-image: linear-gradient(toright, #8e2de2, #4a00e0); for header */

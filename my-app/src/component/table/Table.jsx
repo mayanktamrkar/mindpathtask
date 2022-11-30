@@ -10,7 +10,7 @@ export const Table = (props) => {
     const [key,setKey]=useState(0)
     let a=false
     let data;
-    console.log("table")
+    // console.log("table")
     if(props.year==="All"){
         data = props.data
     }else{

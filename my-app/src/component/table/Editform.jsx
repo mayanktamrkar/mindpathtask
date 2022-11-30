@@ -3,7 +3,7 @@ import button from '../table/Table.module.css'
 import Wrapper from '../comman/Wrapper'
 import './Editform.css'
 const Editform = (props) => {
-  console.log("editcomponent")
+  // console.log("editcomponent")
     const [name,setname]=useState(props.name)
     const [age,setage]=useState(props.age)
     const [address,setaddress]=useState(props.address)

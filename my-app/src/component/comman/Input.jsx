@@ -2,6 +2,7 @@ import React,{useCallback, useState} from 'react'
 import classes from  './Input.module.css'
 
 const Input = (props) => {
+  console.log("Input: ");
     const [data,setData]=useState('')
     const changehandler=(e)=>{
       setData(e.target.value)
@@ -16,4 +17,4 @@ const Input = (props) => {
   )
 }
 
-export default Input
+export default React.memo(Input);

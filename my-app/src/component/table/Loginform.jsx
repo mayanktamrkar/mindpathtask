@@ -33,9 +33,9 @@ const Loginform = () => {
       }else{
         setpasswordError('')
       }
-      console.log('submit',usernameError,passwordError)
+      // console.log('submit',usernameError,passwordError)
     }
-    console.log("g",Datas.username.trim().length)
+    // console.log("g",Datas.username.trim().length)
     const formsubmit=(e)=>{
       e.preventDefault()
       validation(Datas)
@@ -54,7 +54,7 @@ const Loginform = () => {
         setData({...Datas,password:v.value})
       }
     }
-    console.log(Datas)
+    // console.log(Datas)
     return (
     <form onSubmit={formsubmit} className='counter-box'>
         <div className="counter">

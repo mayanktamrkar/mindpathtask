@@ -4,7 +4,7 @@ import React from 'react'
 const items= React.createContext({name:"mayank",age:(p)=>{ console.log("header",p)}})   //create context
 export const Header = (props) => {
   let home="Home"
-  console.log("header")
+  // console.log("header")
   
  
   return (<>
@@ -15,7 +15,7 @@ export const Header = (props) => {
           <li>Contact</li>
           <li>Service</li>
          {props.login? <li onClick={()=>{props.setChange(false)}}>Logout</li>:""}
-         {props.toggle? <li onClick={()=>{props.setToggle(false)}}>light</li>:<li onClick={()=>{props.setToggle(true)}}>Dark</li>}
+         {props.toggle? <li onClick={()=>{props.setToggle(false)}}>Dark</li>:<li onClick={()=>{props.setToggle(true)}}>Light</li>}
          
         </ul>
         

@@ -63,8 +63,8 @@ const Form = (p) => {
              setage(true)
              setaddress(true)
         }
-        console.log(isname,isage,isaddress)
-        console.log(data)
+        // console.log(isname,isage,isaddress)
+        // console.log(data)
         // setIs({isname:false,isage:false,isaddress:false})
     }
     let addfilter=(e)=>{

@@ -7,12 +7,17 @@ const Usereducer = () => {
         if(action.type==="city"){
             return { ...state,city:action.value}
         }},{name:"mayank",city:"indore"});//usereducer
-        console.log(data)
+        // console.log(data)
      const style={
         width:'500px',
         height:'200px',
         backgroundColor:"aqua"
+        
+        
      }
+
+    
+     
   return (
     <div style={style}>
         <button  onClick={()=>{dispatch({type:"name",value:"dev"})}}>change name</button>
